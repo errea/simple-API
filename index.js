@@ -16,10 +16,10 @@ let endDate = new Date(2050, 3, 3);
 
 app.get('/data', (req, res) => {
     res.status(201).send({ 
-        randomName: faker.name.findName(),
-        randomEmail: faker.internet.email(),
+        name: faker.name.findName(),
+        email: faker.internet.email(),
         // randomCard: faker.helpers.createCard(),
-        randomDate: DateGenerator.getRandomDateInRange(startDate, endDate),
+        date: DateGenerator.getRandomDateInRange(startDate, endDate),
     })
 });
 
