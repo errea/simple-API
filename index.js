@@ -27,7 +27,6 @@ app.get('/data', (req, res) => {
     res.status(201).send({ 
         name: faker.name.findName(),
         email: faker.internet.email(),
-        // randomCard: faker.helpers.createCard(),
         date: DateGenerator.getRandomDateInRange(startDate, endDate),
     })
 });
