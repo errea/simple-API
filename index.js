@@ -7,6 +7,15 @@ DateGenerator.getRandomDate();
 const app = express()
 const PORT = process.env.PORT || 5000;
 
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
+// app.get('/data', cors(), (req, res, next) => {
+//     res.send(data);
+// });
+
 
 app.use(express.json());
 
